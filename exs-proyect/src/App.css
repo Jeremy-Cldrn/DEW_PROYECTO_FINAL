@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --Alumni: "Alumni Sans", serif;
+    --Poppins: "Poppins", serif;
+    --color-fondo: #F5F7FA;
+    --color-primario: #007BFF;
+    --color-secundario: #6C757D;
+    --color-acento: #17A2B8;
+}
+
+/* HEADER */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: var(--Poppins);
+    background: #f2f2f2;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.contenedor {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.personalizado {
+    color: var(--color-acento);
+}
+
+.titulo-personalizado {
+    font-size: 3.5rem;
+    font-family: var(--Alumni);
+    font-weight: 400;
+}
+
+.titulo-personalizado > span {
+    font-size: 4.5rem;
+    font-weight: 600;
+    letter-spacing: .3rem;
+    color: var(--color-acento);
+}
+
+/* Seccion Encabezado */
+.Encabezado {
+    width: 100%;
+}
+
+.contenedor {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+
+.navegacion > a {
+    margin: 0 1rem;
+    color: #000;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid transparent;
+    transition: all 0.5s ease-in-out;
+}
+
+.navegacion > a:hover {
+    border-bottom: 2px solid #000;
+}
+
+/* Inicio */
+
+/* Seccion Encabezado */
+.hero {
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(./assets/images/Hero.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #F5F7FA;
+}
+
+.hero > h1 {
+    font-size: 4.5rem;
+    padding: 0 3rem;
+    padding-bottom: .5rem;
+    margin-bottom: 1rem;
+    border-bottom: .3rem solid #F5F7FA;
+}
+
+.hero > h1 > p {
+    font-size: 1.1rem;
+}
+
+/* Seccion Nosotros */
+.Nosotros {
+    margin: 3rem 0;
+}
+
+.contenedor {
+    display: flex;
+    align-items: center;
+}
+
+.articulo {
+    width: 50%;
+}
+
+.articulo > h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.personalizado {
+    font-size: 4rem;
+}
+
+.descripcion {
+    margin-bottom: 2rem;
+    font-weight: 200;
+    line-height: 1.7;
+}
+
+.imagen-Nosotros {
+    width: 50%;
+    padding: 1rem;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.imagen-Nosotros > img {
+    transition: all 0.5s ease-in-out;
+}
+
+.imagen-Nosotros > img:hover {
+    transform: scale(2) rotate(30deg);
+    transition: all 0.5s ease-in-out;
+}
+
+/* Galeria */
+
+.galeria {
+    padding: 3rem;
+}
+.galeria > h2 {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+
+.contenedor-galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.contenedor-galeria > img {
+    filter: grayscale(100%);
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.contenedor-galeria > img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* Footer */
+.contenedor-footer {
+    /* border: solid; */
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0;
+    background-color: var(--color-acento);
+}
+
+.textos {
+    /* border: solid red ; */
+    line-height: 2.5;
+}
+
+.textos > p {
+  text-decoration: none; /* sin línea por defecto */
+  transition: text-decoration 0.3s ease; /* transición suave */
+}
+
+.textos > p:hover {
+    cursor: pointer;
+    text-decoration: underline; /* aparece línea debajo */
+}
+
+.negrita {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.iconos{
+    display: block;
+    align-items: center;
+    line-height: 2.5;
+}
+
+.iconos > img{
+    height: auto;
+    width: 35px;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    transition: transform 0.6s ease-in-out;
+}
+
+.iconos > img:hover {
+    transform: scale(1.4);
+    transition: transform 0.3s ease-in-out; 
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
