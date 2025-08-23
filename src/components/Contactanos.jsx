@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
-// 📌 Esquema de validación con Yup
+// Esquema de validación con Yup
 const schema = yup.object().shape({
   name: yup.string()
     .min(3, "El nombre debe tener al menos 3 caracteres")
@@ -27,7 +27,7 @@ const schema = yup.object().shape({
 });
 
 const Contactanos = () => {
-  // ✅ useForm debe estar dentro del componente
+  // useForm debe estar dentro del componente
   const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema)
   });
