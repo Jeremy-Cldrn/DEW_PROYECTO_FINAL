@@ -6,9 +6,8 @@ import { Inicio } from './pages/Inicio';
 import { Footer } from './components/Footer';
 import { Productos } from "./pages/Productos"
 import { Contacto } from "./pages/Contacto";
-import Decoraciones from './components/Decoraciones';
+import { Servicios } from './pages/Servicios';
 import "./App.css";
-
 
 function App() {
 
@@ -19,7 +18,7 @@ function App() {
         <Route path="/" element={<Inicio />} />
         <Route path="/productos" element={<Productos />} />
         <Route path='/contacto' element={<Contacto />} />
-        <Route path="/servicios" element={<Decoraciones />} />
+        <Route path="/servicios" element={<Servicios />} />
       </Routes>
       <Footer />
     </Fragment>

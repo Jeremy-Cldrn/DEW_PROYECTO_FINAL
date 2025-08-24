@@ -10,17 +10,34 @@ import card8 from "../assets/tarjetas/card8.jpg";
 import card9 from "../assets/tarjetas/card9.jpg";
 import { CardItem } from './CardItem';
 import { Cart } from "./Cart";
+import Swal from "sweetalert2";
 
 export const Card = () => {
+
+    const mostrarAlerta = (cantidad) => {
+    let mensaje;
+
+    if (cantidad === 1) {
+        mensaje = `Se ha agregado ${cantidad} producto al carrito.`;
+    } else {
+        mensaje = `Se han agregado ${cantidad} productos al carrito.`;
+    }
+
+    Swal.fire({
+        title: "¡Éxito!",
+        text: mensaje,
+        icon: "success",
+        confirmButtonText: "Aceptar",
+        confirmButtonColor: "#17a2b8",
+    });
+};
 
     const [cartCount, setCartCount] = useState(0);
 
     const agregarAlCarrito = (cantidad) => {
-        setCartCount(cartCount + cantidad);
-        if(cantidad == 1) {
-            alert(`Se ha agregado ${cantidad} producto al carrito exitosamente.`);
-        }else {
-            alert(`Se han agregado ${cantidad} productos al carrito exitosamente.`);
+        if (cantidad > 0) {
+            setCartCount(cartCount + cantidad);
+            mostrarAlerta(cantidad); // ✅ aquí pasamos la cantidad
         }
     };
 

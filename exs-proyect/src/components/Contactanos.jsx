@@ -2,6 +2,8 @@ import React, { Fragment } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { Banner } from "./Banner";
+import Swal from "sweetalert2";
 
 // Esquema de validación con Yup
 const schema = yup.object().shape({
@@ -26,20 +28,35 @@ const schema = yup.object().shape({
     .required("La descripción es obligatoria"),
 });
 
+
 const Contactanos = () => {
   // useForm debe estar dentro del componente
-  const { register, handleSubmit, formState: { errors } } = useForm({
+  const { register, handleSubmit, formState: { errors }, reset } = useForm({
     resolver: yupResolver(schema)
   });
 
   const onData = (data) => {
     console.log(data);
+
+    //alerta formulario
+    Swal.fire({
+      title: "¡Enviado!",
+      text: "Gracias por contactarnos. Pronto nos pondremos en contacto contigo.",
+      icon: "success",
+      confirmButtonText: "Aceptar",
+      confirmButtonColor: "#17a2b8",
+    });
+
+    // Limpiar formulario
+    reset();
   };
 
   return (
     <Fragment>
       <section>
-        <h5>“Te ofrecemos lo mejor, contáctanos”</h5>
+        <h5>
+          “Completa el formulario para que podamos ayudarte de la mejor manera.
+        </h5>
 
         <form onSubmit={handleSubmit(onData)}>
           {/* Nombre */}
@@ -63,7 +80,7 @@ const Contactanos = () => {
           <p style={{ color: "red" }}>{errors.description?.message}</p>
 
           {/* Botón */}
-          <input type="submit" value="Enviar" />
+          <input type="submit" value="Enviar"/>
         </form>
       </section>
 

@@ -14,6 +14,8 @@ import galeria11 from "../assets/galeria/galeria11.jpg";
 import galeria12 from "../assets/galeria/galeria12.jpg";
 
 import { useState, useEffect } from "react";
+import { Banner } from "../components/Banner";
+
 export const Inicio = () => {
   const fotos = [
     { img: galeria1 },
@@ -30,31 +32,12 @@ export const Inicio = () => {
     { img: galeria12 },
   ];
 
-  //Fecha y hora
-  const [fecha, setFecha] = useState("");
-  const [hora, setHora] = useState("");
-  useEffect(() => {
-    setInterval(() => {
-      const fecha = new Date();
-      setFecha(fecha.toLocaleDateString());
-      setHora(fecha.toLocaleTimeString());
-    }, 1000);
-  });
-
   return (
     <Fragment>
-      <div className="fecha_hora">
-        <p className="">{fecha}</p>
-        <p className="">{hora}</p>
-      </div>
-      <section className="hero">
-        <h1>Bienvenidos a Detalles Unicos</h1>
-        <p>
-          Empieza a realizar decoraciones y arreglos a tu gusto y con detalles
-          unicos!
-        </p>
-      </section>
-
+      <Banner
+        titulo="Bienvenidos a Detalles Unicos"
+        mensaje="Crea decoraciones y arreglos personalizados, llenos de estilo y detalles únicos."
+      />
       <section className="Nosotros" id="nosotros">
         <div className="contenedor">
           <article className="articulo">

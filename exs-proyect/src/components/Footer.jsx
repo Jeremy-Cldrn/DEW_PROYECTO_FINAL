@@ -6,10 +6,10 @@ import imgTw from "../assets/images/signo-de-twitter.png";
 
 export const Footer = () => {
   const redes = [
-    { img: imgFb },
-    { img: imgIg },
-    { img: imgWsp },
-    { img: imgTw },
+    { img: imgFb, url: "https://facebook.com" },
+    { img: imgIg, url: "https://instagram.com" },
+    { img: imgWsp, url: "https://wa.me/tu-numero" },
+    { img: imgTw, url: "https://twitter.com" },
   ];
 
   const secciones = [

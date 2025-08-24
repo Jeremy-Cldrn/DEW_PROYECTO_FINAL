@@ -58,6 +58,7 @@ img {
 /* Navegador */
 .Encabezado {
   width: 100%;
+  position: relative;
 }
 
 .contenedor_encabezado {
@@ -81,10 +82,19 @@ img {
 
 /* Inicio */
 .fecha_hora {
+  /* border: solid; */
   display: flex;
+  position: absolute;
+  margin-left: 33rem;
+  margin-top: 4.5rem;
   gap: 2rem;
-  justify-content: center;
   font-weight: bold;
+}
+.fecha_hora > p {
+  /* border: solid red; */
+  height: 100%;
+  font-family: var(--Alumni);
+  font-size: 22px;
 }
 .hero {
   width: 100%;
@@ -99,6 +109,7 @@ img {
   align-items: center;
   justify-content: center;
   color: #f5f7fa;
+  margin-bottom: 3rem;
 }
 
 .hero > h1 {
@@ -106,13 +117,15 @@ img {
   padding: 0 3rem;
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
-  border-bottom: 0.3rem solid #f5f7fa;
+  border-bottom: 0.3rem solid #c7c8c0;
   font-weight: bold;
+  color:  #c7c8c0;
 }
 
 .hero > h1 > p {
   font-size: 1.1rem;
   font-weight: bold;
+  color: #c7c8c0;
 }
 
 /* Seccion Nosotros */
